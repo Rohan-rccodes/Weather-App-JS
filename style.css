@@ -61,3 +61,7 @@ body{
     outline: 0;
     cursor: pointer;
 }
+.search button img{
+    width: 20px;
+    height: 24px;
+}
