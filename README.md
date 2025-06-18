@@ -1,12 +1,12 @@
 # 🌦️ Weather App using JavaScript
 
-A clean, minimal, and responsive Weather App built using **HTML**, **CSS**, and **JavaScript** that fetches real-time weather data using the [OpenWeatherMap API](https://openweathermap.org/api). Type in a city and instantly get current temperature, weather condition, humidity, and wind speed.
+A clean, minimal, and responsive Weather App built using **HTML**, **CSS**, and **JavaScript** that fetches real-time weather data using the [OpenWeatherMap API](https://openweathermap.org/api). Type in a city and instantly get current temperature, weather conditions, humidity, and wind speed.
 
 ---
 
 ## 🔗 Live Demo
 
-👉 [View Live Website](https://rohan-rccodes.github.io/weather-app/)
+👉 [View Live Website](https://rohan-rccodes.github.io/Weather-App-JS/)
 
 📸 Preview:
 
