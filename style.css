@@ -85,7 +85,7 @@ body{
 
 .weather-icon{
    width: 150px;
-   margin-top: 20px;
+   /* margin-top: 10px; */
 }
 
 .weather h1{
