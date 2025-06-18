@@ -69,16 +69,10 @@ body{
     outline: 0;
     cursor: pointer;
 }
-
-/* Search button hover effect */
-@media screen and (hover: hover) {
-    .search button:hover{
-        background-color: #fff;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    }
-    
+.search button:hover{
+    background: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
-
 .search button img{
     width: 20px
 }
@@ -133,7 +127,8 @@ body{
     font-weight: 500;
 }
 
-/**/
+/*-----------JavaScript Custom Alert------------*/
+
 .custom-alert {
   position: fixed;
   top: 10px;
@@ -155,4 +150,106 @@ body{
 .custom-alert.show {
   opacity: 1;
   pointer-events: auto;
+}
+
+/* --- Responsive Design --- */
+
+/* Responsive Design for smaller screens*/
+@media screen and (max-width: 768px) {
+  .card {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .search input {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .search button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .weather h1 {
+    font-size: 50px;
+  }
+
+  .weather h2 {
+    font-size: 30px;
+  }
+
+  .humidity,
+  .wind {
+    font-size: 22px;
+  }
+
+  .col img {
+    width: 32px;
+  }
+
+  .custom-alert {
+    font-size: 14px;
+    padding: 10px 20px;
+    max-width: 95%;
+  }
+}
+
+/* Responsive Design for smaller screens*/
+@media screen and (max-width: 480px) {
+  .card {
+    max-width: 95%;
+    margin: 40px auto;
+    padding: 20px;
+  }
+
+  .card-header h1 {
+    font-size: 22px;
+  }
+
+  .card-header p {
+    font-size: 14px;
+  }
+
+  .weather-icon {
+    width: 100px;
+  }
+
+  .weather h1 {
+    font-size: 40px;
+  }
+
+  .weather h2 {
+    font-size: 24px;
+  }
+
+  .details {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 25px;
+  }
+
+  .search {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search input {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .search button {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .col {
+    justify-content: center;
+  }
+
+  .humidity,
+  .wind {
+    font-size: 20px;
+  }
 }
