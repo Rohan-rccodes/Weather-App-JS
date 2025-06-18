@@ -75,3 +75,11 @@ searchbtn.addEventListener("click", () => {
   const city = searchbox.value.trim();
   checkWeather(city);
 });
+
+// ✅ Allow pressing Enter to search
+searchbox.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    const city = searchbox.value.trim();
+    checkWeather(city);
+  }
+});
