@@ -39,21 +39,35 @@ A clean, minimal, and responsive Weather App built using **HTML**, **CSS**, and 
 ## 📁 Folder Structure
 
 📦 weather-app/
+
 ├── 📄 index.html
 
 ├── 🎨 style.css
+
 ├── 📜 script.js
+
 ├── 📁 images/
+
 │ ├── clouds.png
+
 │ ├── clear.png
+
 │ ├── drizzle.png
+
 │ ├── rain.png
+
 │ ├── snow.png
+
 │ ├── mist.png
+
 │ ├── wind.png
+
 │ ├── humidity.png
+
 │ ├── search.png
+
 │ └── preview.png
+
 
 ---
 
