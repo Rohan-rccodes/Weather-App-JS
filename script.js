@@ -1,25 +1,29 @@
+// Get the weather data from OpenWeatherMap API
+// Replace 'your_api_key' with your actual API key from OpenWeatherMap
+
 const apikey = "737ab23afa4b565ff2c4727ff1ca6deb";
 const apiUrl =
   "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 
+// Get the user's geolocation
 const searchbox = document.querySelector(".search input");
 const searchbtn = document.querySelector(".search button");
 const weathericon = document.querySelector(".weather-icon");
 
-
 // Check if the browser supports geolocation
 async function checkWeather(city) {
   const response = await fetch(apiUrl + city + `&appid=${apikey}`);
+  var data = await response.json();
 
-
-  // If the response status is 404, hide the weather section and show the error message
-  if (responde.status == 404) {
+  // If the response status is 404, it means the city was not found
+  // Hide the weather section and show the error message
+  if (response.status == 404) {
     document.querySelector(".weather").style.display = "none";
     document.querySelector(".error").style.display = "block";
   } else {
-    var data = await response.json();
+    console.log(data);
 
-    // If the response is successful, update the weather information
+    // Update the UI with the fetched weather data
     document.querySelector(".city").innerText = data.name;
     document.querySelector(".temp").innerText =
       Math.round(data.main.temp) + "°C";
@@ -46,8 +50,11 @@ async function checkWeather(city) {
     document.querySelector(".weather").style.display = "block";
     document.querySelector(".error").style.display = "none";
   }
+  // Clear the search box after fetching the weather
+  searchbox.value = "";
 }
 
+// Check weather based on geolocation
 searchbtn.addEventListener("click", () => {
   checkWeather(searchbox.value);
 });
