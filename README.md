@@ -7,7 +7,7 @@ A clean, minimal, and responsive Weather App built using **HTML**, **CSS**, and 
 ## 🔗 Live Demo
 
 👉 [View Live Website](https://rohan-rccodes.github.io/weather-app/)
-  
+
 📸 Preview:
 
 ![Weather App Preview](images/preview.png)
@@ -40,6 +40,7 @@ A clean, minimal, and responsive Weather App built using **HTML**, **CSS**, and 
 
 📦 weather-app/
 ├── 📄 index.html
+
 ├── 🎨 style.css
 ├── 📜 script.js
 ├── 📁 images/
