@@ -23,6 +23,12 @@ body{
     position: relative;
 }
 
+.card-header{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
 .search{
     width: 100%;
     display: flex;
