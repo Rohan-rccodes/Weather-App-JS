@@ -18,12 +18,10 @@
                 <p>Get the current weather of any city</p>
             </div>
 
+            <!--------SEARCH BUTTON---------->
             <div class="search">
-
-                <input type="text" id="search" placeholder="Search city..." spellcheck="false">
-                <button id="search-btn">
-                    <img src="images/search.png" alt="">
-                </button>
+                <input type="text" placeholder="Search city..." />
+                <button><img src="images/search.png" alt="Search" /></button>
             </div>
 
             <div class="error">
@@ -38,20 +36,21 @@
 
                 <div class="details">
                     <div class="col">
-                        <img src="images/wind.png" alt="">
+                        <img src="images/humidity.png" alt="" />
                         <div>
-                            <p class="humidity">60%</p>
+                            <p class="humidity">--%</p>
                             <p>Humidity</p>
                         </div>
                     </div>
                     <div class="col">
-                        <img src="images/humidity.png" alt="">
+                        <img src="images/wind.png" alt="" />
                         <div>
-                            <p class="wind">16 km/h</p>
+                            <p class="wind">--km/h</p>
                             <p>Wind Speed</p>
                         </div>
                     </div>
                 </div>
+
             </div>
 
             <div id="custom-alert" class="custom-alert">
@@ -62,6 +61,7 @@
 
             <script src="script.js"></script>
 
+        </div>
     </body>
 
 </html>

@@ -54,7 +54,7 @@ async function checkWeather(city) {
     document.querySelector(".humidity").innerText = data.main.humidity + "%";
     document.querySelector(".wind").innerText = data.wind.speed + "km/h";
 
-    
+
     // Set the weather icon based on the weather condition
     // Set the icon based on weather condition
 
@@ -93,6 +93,8 @@ async function checkWeather(city) {
   // Clear the input
   searchbox.value = "";
 }
+
+
 
 // Button event
 searchbtn.addEventListener("click", () => {
