@@ -1,8 +1,8 @@
 // Description: This script fetches weather data from the OpenWeatherMap API based on user input and displays it on the webpage.
 
 const apikey = "737ab23afa4b565ff2c4727ff1ca6deb";
-const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
-
+const apiUrl =
+  "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 
 // Get references to the DOM elements
 // ❗️ Make sure to replace the API key with your own from OpenWeatherMap
@@ -10,7 +10,6 @@ const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q="
 const searchbox = document.querySelector(".search input");
 const searchbtn = document.querySelector(".search button");
 const weathericon = document.querySelector(".weather-icon");
-
 
 // Function to check the weather based on the city name
 async function checkWeather(city) {
@@ -58,30 +57,32 @@ async function checkWeather(city) {
     // Set the weather icon based on the weather condition
     // Set the icon based on weather condition
 
+    console.log("Weather Condition:", data.weather[0].main);
+
     const condition = data.weather[0].main.toLowerCase();
-    
-    const weather = data.weather[0].main;
-    switch (weather) {
-      case "Clouds":
+    console.log("Weather Condition:", condition); // for debugging
+
+    switch (condition) {
+      case "clouds":
         weathericon.src = "images/clouds.png";
         break;
-      case "Clear":
+      case "clear":
         weathericon.src = "images/clear.png";
         break;
-      case "Rain":
+      case "rain":
         weathericon.src = "images/rain.png";
         break;
-      case "Drizzle":
+      case "drizzle":
         weathericon.src = "images/drizzle.png";
         break;
-      case "Mist":
+      case "mist":
         weathericon.src = "images/mist.png";
         break;
-      case "Snow":
+      case "snow":
         weathericon.src = "images/snow.png";
         break;
       default:
-        weathericon.src = "";
+        weathericon.src = "images/clear.png"; // fallback icon
     }
 
     document.querySelector(".weather").style.display = "block";
@@ -97,4 +98,3 @@ searchbtn.addEventListener("click", () => {
   const city = searchbox.value.trim();
   checkWeather(city);
 });
-
