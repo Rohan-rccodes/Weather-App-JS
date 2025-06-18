@@ -57,6 +57,9 @@ async function checkWeather(city) {
 
     // Set the weather icon based on the weather condition
     // Set the icon based on weather condition
+
+    const condition = data.weather[0].main.toLowerCase();
+    
     const weather = data.weather[0].main;
     switch (weather) {
       case "Clouds":
