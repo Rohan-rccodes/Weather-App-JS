@@ -6,9 +6,11 @@ const searchbox = document.querySelector(".search input");
 const searchbtn = document.querySelector(".search button");
 const weathericon = document.querySelector(".weather-icon");
 
+
 // Check if the browser supports geolocation
 async function checkWeather(city) {
   const response = await fetch(apiUrl + city + `&appid=${apikey}`);
+
 
   // If the response status is 404, hide the weather section and show the error message
   if (responde.status == 404) {
