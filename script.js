@@ -15,7 +15,7 @@ const weathericon = document.querySelector(".weather-icon");
 // Function to check the weather based on the city name
 async function checkWeather(city) {
   if (!city) {
-    showCustomAlert("Please enter a city name");
+    showCustomAlert("Please enter a correct city name");
     return;
   }
   //-------------------------------------------------------------------
