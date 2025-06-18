@@ -5,7 +5,7 @@
 }
 
 body{
-    font-family: 'Arial', sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: #333;
     color: #969696;
 }
@@ -15,7 +15,7 @@ body{
     max-width: 400px;
     margin: 20px auto 0;
     color: #fff;
-    background: linear-gradient(135deg, #8398ff, #030fff);
+    background: linear-gradient(135deg, #63d0ff, #aa5bfe);
     border-radius: 20px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     padding: 35px 30px;
@@ -32,16 +32,16 @@ body{
 .search input{
     border: 0;
     outline: 0;
-    background: #ebfffc;
-    color: #333;
+    background: #fff;
+    color: #383838;
     padding: 10px 25px;
-    border-radius: 20px;
+    border-radius: 16px;
     flex: 1;
     margin-right: 15px;
     font-size: 18px;
 }
 .search input::placeholder{
-    color: #0c0022;
+    color: #5d5d5d;
 }
 
 .search input:focus
@@ -51,15 +51,16 @@ body{
 }
 
 .search button{
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
-    background: #ebfffc;
-    color: #333;
+    background: #fff;
+    color: #383838;
     border: 0;
     outline: 0;
     cursor: pointer;
 }
+
 /* Search button hover effect */
 @media screen and (hover: hover) {
     .search button:hover{
@@ -70,7 +71,7 @@ body{
 }
 
 .search button img{
-    width: 16px
+    width: 2px
 }
 
 .weather-icon{
