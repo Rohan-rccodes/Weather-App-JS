@@ -15,9 +15,25 @@ const weathericon = document.querySelector(".weather-icon");
 // Function to check the weather based on the city name
 async function checkWeather(city) {
   if (!city) {
-    alert("Please enter a city name");
+    showCustomAlert("Please enter a city name");
     return;
   }
+  //-------------------------------------------------------------------
+  // Show a custom alert message
+  
+  function showCustomAlert(message) {
+    const alertBox = document.getElementById("custom-alert");
+    const alertMessage = document.getElementById("alert-message");
+
+    alertMessage.textContent = message;
+    alertBox.classList.add("show");
+
+    setTimeout(() => {
+      alertBox.classList.remove("show");
+    }, 3000); // alert disappears after 3 seconds
+  }
+
+  //---------------------------------------------------------------------
 
   // If no city is provided, use a default value (e.g., "London")
 
@@ -34,10 +50,10 @@ async function checkWeather(city) {
     document.querySelector(".error").style.display = "block";
   } else {
     document.querySelector(".city").innerText = data.name;
-    document.querySelector(".temp").innerText = Math.round(data.main.temp) + "°C";
+    document.querySelector(".temp").innerText =
+      Math.round(data.main.temp) + "°C";
     document.querySelector(".humidity").innerText = data.main.humidity + "%";
     document.querySelector(".wind").innerText = data.wind.speed + "km/h";
-
 
     // Set the weather icon based on the weather condition
     // Set the icon based on weather condition
