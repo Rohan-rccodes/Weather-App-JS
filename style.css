@@ -28,6 +28,9 @@ body{
     flex-direction: column;
     margin: 20px;
 }
+.card-header p{
+    color: #eeeeee;
+}
 
 .search{
     width: 100%;
