@@ -112,5 +112,13 @@ body{
     margin-top: -6px;
 }
 .weather{
-    /* display: none; */
+    display: none;
+}
+
+.error{
+    color: #f9f1f1;
+    font-size: 18px;
+    margin:10px;
+    text-align: left;
+    display: none;
 }
