@@ -18,7 +18,7 @@ body{
     background: linear-gradient(155deg, #31e1ee, #7a06f5);
     border-radius: 20px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-    padding: 35px 30px 45px 30px;
+    padding: 25px 30px 45px 30px;
     text-align: center;
     position: relative;
 }
