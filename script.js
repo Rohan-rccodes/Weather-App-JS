@@ -20,7 +20,7 @@ async function checkWeather(city) {
   }
   //-------------------------------------------------------------------
   // Show a custom alert message
-  
+
   function showCustomAlert(message) {
     const alertBox = document.getElementById("custom-alert");
     const alertMessage = document.getElementById("alert-message");
@@ -30,7 +30,7 @@ async function checkWeather(city) {
 
     setTimeout(() => {
       alertBox.classList.remove("show");
-    }, 3000); // alert disappears after 3 seconds
+    }, 1000); // alert disappears after 1 seconds
   }
 
   //---------------------------------------------------------------------
