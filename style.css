@@ -152,6 +152,30 @@ body{
   pointer-events: auto;
 }
 
+/* --- Autocomplete Styles --- */
+
+.autocomplete-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #000;
+  border-radius: 8px;
+  max-height: 150px;
+  overflow-y: auto;
+  position: absolute;
+  width: calc(100% - 60px);
+  z-index: 10;
+}
+.autocomplete-list li {
+  padding: 10px;
+  cursor: pointer;
+}
+.autocomplete-list li:hover {
+  background-color: #eee;
+}
+
+
 /* --- Responsive Design --- */
 
 /* Responsive Design for smaller screens*/
