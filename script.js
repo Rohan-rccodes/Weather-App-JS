@@ -1,18 +1,33 @@
+// Description: This script fetches weather data from the OpenWeatherMap API based on user input and displays it on the webpage.
+
 const apikey = "737ab23afa4b565ff2c4727ff1ca6deb";
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+
+
+// Get references to the DOM elements
+// ❗️ Make sure to replace the API key with your own from OpenWeatherMap
 
 const searchbox = document.querySelector(".search input");
 const searchbtn = document.querySelector(".search button");
 const weathericon = document.querySelector(".weather-icon");
 
+
+// Function to check the weather based on the city name
 async function checkWeather(city) {
   if (!city) {
     alert("Please enter a city name");
     return;
   }
 
+  // If no city is provided, use a default value (e.g., "London")
+
   const response = await fetch(apiUrl + city + `&appid=${apikey}`);
   const data = await response.json();
+
+  // Check if the response is successful
+  // If the city is not found, display an error message
+  // If the city is found, display the weather information
+  // and set the appropriate weather icon
 
   if (response.status == 404 || !data.name) {
     document.querySelector(".weather").style.display = "none";
@@ -23,6 +38,8 @@ async function checkWeather(city) {
     document.querySelector(".humidity").innerText = data.main.humidity + "%";
     document.querySelector(".wind").innerText = data.wind.speed + "km/h";
 
+
+    // Set the weather icon based on the weather condition
     // Set the icon based on weather condition
     const weather = data.weather[0].main;
     switch (weather) {
@@ -62,5 +79,3 @@ searchbtn.addEventListener("click", () => {
   checkWeather(city);
 });
 
-// ❌ Remove this call if you're not using geolocation or default city
-// checkWeather(); // ← remove this line if no default value
